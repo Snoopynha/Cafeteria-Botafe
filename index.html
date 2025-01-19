@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cafeteria Botafé</title>
+        <meta name="description" content="Cafeteria Botafé foi uma ideia feita em uma avaliação onde teria de fazer uma loja que utilizaria matriz para guardar seus produtos, códigos e preços para a matéria Fundamentos de Algoritmo em C.">
+        <meta name="author" content="Camilly Vitória Barbosa">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="icon" href="assets/icones/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/icones/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/icones/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icones/apple-touch-icon.png">
+        <link rel="manifest" href="assets/icones/site.webmanifest">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <input type="checkbox" id="menu-btn" class="menu-btn">
+                <label for="menu-btn" class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1em" width="1em">
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </label>
+
+                <div class="side-menu">
+                    <div class="menu-container">
+                        <strong>Principais Links</strong>
+
+                        <label for="menu-btn" class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" height="1em" width="1em">
+                                <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                            </svg>
+                        </label>
+
+                        <ul class="menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="emconstrucao.html">Sobre</a></li>
+                            <li><a href="emconstrucao.html">Produtos</a></li>
+                            <li><a href="emconstrucao.html">Review</a></li>
+                            <li><a href="emconstrucao.html">Contato</a></li>
+                            <li><a href="emconstrucao.html">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <img src="assets/icones/logo-grande.png" alt="Logo marrom escrita Cafeteria Botafé">
+                </a>
+
+                <div class="nav-btns">
+                    <a href="#" class="nav-search" id="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Lupa de pesquisa">
+                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </a>
+                    <form id="search-form" class="nav-search hidden">
+                        <input type="text" id="search-input" placeholder="Buscar...">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <a href="#" class="nav-user" id="nav-user">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1em" width="1em" aria-label="Icone de usuário">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="nav-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="1em" width="1em" aria-label="Carrinho de compras">
+                            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                        </svg>
+                        <span>+</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="home container" id="home">
+                <div class="home-text">
+                    <h1>Sabor e conforto em cada xícara</h1>
+                    <p>O café que você pode confiar.</p>
+                    <a href="emconstrucao.html" class="btn">
+                        <span>Peça Já</span>
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </a>
+                </div>
+                <img src="assets/imagens/home/home-img.png" alt="Xícara de cafe" class="home-img">
+            </section>
+        </main>
+
+        <div class="form">
+            <div class="login-form" id="login-form">
+                <a href="#" class="form-cancel" id="login-cancel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"  height="1em"  width="1em" aria-label="Botão de fechar">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </a>
+
+                <strong>Fazer login</strong>
+
+                <form action="" method="post">
+                    <input type="email" name="email" placeholder="Seuemail@gmail.com" id="email" required>
+                    <input type="password" name="password" placeholder="Senha" id="password" required>
+                    <input type="submit" value="Logar">
+                </form>
+
+                <div class="form-btns">
+                    <a href="#" class="password-forget">Esqueceu sua senha?</a>
+                    <a href="#" class="signup-btn" id="signup-btn">Criar uma conta</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="signup-form" id="signup-form">
+                <a href="#" class="form-cancel" id="signup-cancel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"  height="1em"  width="1em" aria-label="Botão de fechar">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </a>
+
+                <strong>Criar conta</strong>
+
+                <form action="" method="post">
+                    <input type="text" name="fullname" placeholder="Nome completo" id="fullname" required>
+                    <input type="email" name="email" placeholder="Seuemail@gmail.com" id="email" required>
+                    <input type="password" name="password" placeholder="Senha" id="password" required>
+                    <input type="submit" value="Criar">
+                </form>
+
+                <div class="form-btns">
+                    <a href="#" class="already-account" id="already-account">Já possui conta?</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="services container" id="services">
+            <div class="heading">
+                <h2>Onde café artesanal, cultura e comodidade <br>
+                    se encontram.</h2>
+            </div>
+            <div class="service-content">
+                <div class="service-box">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" aria-label="Icone de livros empilhados">
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                        stroke="none">
+                        <path d="M1585 5108 c-42 -22 -45 -37 -45 -185 l0 -143 555 0 555 0 0 125 c0142 -13 189 -55 205 -38 14 -984 13 -1010 -2z"/>
+                        <path d="M1540 4480 l0 -130 553 2 552 3 0 125 0 125 -552 3 -553 2 0 -130z"/>
+                        <path d="M54 4430 c-49 -20 -54 -42 -54 -237 l0 -183 683 2 682 3 3 158 c1 91-2 175 -8 198 -19 71 -1 69 -682 68 -332 0 -613 -4 -624 -9z"/>
+                        <path d="M3970 4430 c-19 -5 -314 -83 -654 -174 -474 -127 -625 -171 -643
+                        -187 l-23 -22 0 66 0 67 -555 0 -555 0 0 -1580 0 -1580 553 2 552 3 5 1470 5
+                        1469 55 -213 c30 -117 58 -217 61 -222 3 -5 320 75 718 181 392 104 715 190
+                        717 190 9 0 1 39 -51 241 -67 258 -70 266 -106 284 -31 17 -30 16 -79 5z"/>
+                        <path d="M0 2430 l0 -1410 683 2 682 3 3 1408 2 1407 -685 0 -685 0 0 -1410z
+                        m1065 1144 c42 -16 45 -45 45 -424 l0 -362 -29 -29 -29 -29 -362 0 c-379 0
+                        -408 3 -424 45 -3 9 -6 184 -6 388 0 367 0 371 22 394 l21 23 373 0 c205 0
+                        380 -3 389 -6z"/>
+                        <path d="M3540 3547 c-393 -105 -717 -192 -719 -194 -6 -4 27 -144 38 -161 6
+                        -10 166 29 721 177 392 105 715 193 718 195 5 5 -26 143 -37 162 -4 8 -233
+                        -49 -721 -179z"/>
+                        <path d="M3625 3205 c-625 -167 -720 -194 -717 -210 8 -41 482 -1848 487
+                        -1853 4 -5 1393 361 1426 376 14 6 -16 129 -226 932 -133 509 -243 930 -246
+                        936 -3 8 -250 -54 -724 -181z"/>
+                        <path d="M4145 1161 c-479 -129 -701 -193 -702 -202 -2 -8 17 -86 40 -174 33
+                        -124 46 -160 59 -159 17 1 1421 374 1426 379 2 2 -16 79 -41 172 -37 141 -47
+                        168 -63 170 -10 1 -334 -83 -719 -186z"/>
+                        <path d="M0 765 l0 -85 683 2 682 3 3 83 3 82 -686 0 -685 0 0 -85z"/>
+                        <path d="M1540 765 l0 -85 553 2 552 3 3 83 3 82 -556 0 -555 0 0 -85z"/>
+                        <path d="M4290 647 c-393 -105 -716 -191 -718 -192 -1 -1 22 -94 52 -206 45
+                        -171 58 -207 80 -226 15 -13 35 -23 46 -23 10 0 312 78 671 174 582 156 656
+                        178 676 201 13 14 23 34 23 43 1 24 -104 422 -110 421 -3 0 -327 -87 -720
+                        -192z"/>
+                        <path d="M0 284 l0 -226 29 -29 29 -29 622 0 c426 0 628 3 642 11 41 22 48 65
+                        48 289 l0 210 -685 0 -685 0 0 -226z"/>
+                        <path d="M1540 286 c0 -123 3 -232 6 -241 17 -43 37 -45 549 -45 329 0 493 3
+                        507 11 41 22 48 65 48 289 l0 210 -555 0 -555 0 0 -224z"/>
+                        </g>
+                    </svg>
+                    <p>Área de leitura</p>
+                </div>
+                <div class="service-box">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" aria-label="Icone de xícara">
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                        stroke="none">
+                        <path d="M3600 5102 c-56 -27 -66 -61 -46 -146 22 -97 20 -151 -8 -211 -56
+                        -121 -178 -185 -541 -285 -467 -128 -705 -311 -786 -605 -38 -141 -26 -204 46
+                        -224 85 -23 154 29 173 130 30 160 127 272 317 365 68 33 217 88 390 145 427
+                        139 567 219 640 366 40 81 46 204 16 322 -25 98 -41 124 -86 145 -43 21 -72
+                        20 -115 -2z"/>
+                        <path d="M4249 4851 c-28 -29 -29 -32 -29 -129 0 -113 -14 -170 -58 -235 -65
+                        -94 -199 -155 -472 -216 -362 -81 -530 -158 -670 -308 -70 -74 -139 -204 -147
+                        -276 -4 -36 -1 -48 21 -74 46 -54 123 -65 170 -24 10 9 36 53 57 99 51 110
+                        126 186 241 241 96 46 198 76 428 126 282 62 391 110 511 222 115 109 164 241
+                        158 424 -3 81 -7 99 -27 124 -32 41 -59 54 -110 55 -35 0 -49 -6 -73 -29z"/>
+                        <path d="M96 3192 c-2 -4 0 -188 5 -407 8 -370 23 -621 49 -820 94 -709 323
+                        -1227 680 -1534 l68 -59 -41 -6 c-23 -3 -96 -10 -162 -16 -127 -12 -403 -53
+                        -470 -71 -64 -17 -125 -51 -125 -69 0 -39 60 -65 230 -99 187 -37 518 -70 935
+                        -93 304 -17 1376 -17 1680 0 696 38 1134 106 1162 178 22 58 -189 112 -601
+                        154 -103 10 -190 20 -191 22 -2 2 26 27 61 57 128 105 292 317 389 502 l39 76
+                        101 6 c640 40 1069 347 1113 797 34 344 -123 626 -442 796 -124 66 -251 109
+                        -443 150 l-23 4 0 220 0 220 -2004 0 c-1103 0 -2007 -4 -2010 -8z m1092 -379
+                        c-80 -283 -88 -678 -22 -1113 41 -271 139 -680 213 -894 12 -33 21 -61 21 -64
+                        0 -2 -26 17 -57 43 -404 337 -652 797 -747 1385 -33 207 -42 518 -20 673 l6
+                        37 313 0 312 0 -19 -67z m3098 -513 c171 -82 246 -250 216 -488 -26 -204 -109
+                        -298 -317 -361 -67 -20 -227 -52 -233 -46 -1 1 9 51 23 111 53 220 97 513 110
+                        729 4 55 8 105 10 112 5 14 101 -14 191 -57z"/>
+                        </g>
+                    </svg>
+                    <p>Produtos Artesanais</p>
+                </div>
+                <div class="service-box">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" aria-label="Icone de livro aberto">
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                        stroke="none">
+                        <path d="M670 4275 c-58 -7 -129 -18 -159 -24 -29 -6 -55 -11 -57 -11 -2 0 -4
+                        -594 -4 -1320 0 -726 3 -1320 8 -1320 4 0 45 7 91 15 154 27 376 38 543 26
+                        459 -32 869 -168 1235 -410 l118 -78 3 1286 3 1286 -46 40 c-280 242 -682 425
+                        -1090 496 -148 26 -497 34 -645 14z"/>
+                        <path d="M3930 4279 c-443 -54 -850 -223 -1189 -493 l-71 -57 0 -1290 c0
+                        -1030 3 -1288 13 -1282 6 4 57 38 113 75 513 342 1186 486 1777 383 45 -8 85
+                        -15 90 -15 4 0 7 594 7 1319 l0 1319 -27 6 c-184 38 -546 56 -713 35z"/>
+                        <path d="M205 3935 c-5 -2 -54 -13 -107 -25 l-98 -21 0 -1530 c0 -841 2 -1529
+                        4 -1529 1 0 54 24 117 54 212 100 470 185 715 235 369 75 697 89 1119 45 l50
+                        -5 -55 30 c-129 71 -369 152 -560 191 -172 34 -292 43 -519 37 -178 -5 -239
+                        -10 -346 -32 -215 -44 -218 -44 -260 -2 l-35 35 0 1261 c0 694 -3 1261 -7
+                        1260 -5 0 -12 -2 -18 -4z"/>
+                        <path d="M4890 2679 l0 -1261 -35 -35 c-33 -33 -39 -35 -83 -30 -26 3 -89 15
+                        -141 26 -279 60 -616 60 -908 0 -188 -38 -399 -110 -539 -184 l-69 -36 55 6
+                        c204 20 272 25 412 25 510 1 981 -104 1461 -324 l77 -35 0 1528 0 1529 -92 21
+                        c-51 12 -103 24 -115 26 l-23 5 0 -1261z"/>
+                        </g>
+                    </svg>
+                    <p>Clube do livro</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about container" id="about">
+            <div class="about-content">
+                <div class="about-details">
+                    <div class="heading2">
+                        <h1><span>Seu porto <br></span> a todos os instantes.</h1>
+                        <p>Aqui você encontra momentos únicos e sabores incríveis em um espaço único. 
+                            Desfrute de uma área de leitura aconchegante, explore nossos produtos artesanais. 
+                            Conheça mais sobre nossa história e paixão pelo café clicando abaixo.
+                        </p>
+                    </div>
+
+                    <div class="social-links-list">
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="emconstrucao.html" class="btn2">
+                    <span>Saiba mais</span>
+                    <ion-icon name="arrow-up-outline"></ion-icon>
+                </a>
+            </div>
+        </section>
+
+        <section class="shop container" id="shop">
+            <div class="heading">
+                <h1>Conheça Já</h1>
+                <h2>nossos produtos</h2>
+            </div>
+            <div class="shop-content">
+                <div class="shop-box">
+                    <div class="shop-img">
+                        <img src="assets/imagens/home/shop-salgados.png" alt="Prato de salgado">
+                    </div>
+                    <div class="stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                    </div>
+                    <h2>Salgados</h2>
+                    <p>R$8</p>
+                    <a href="emconstrucao.html" class="btn3">
+                        <span>Veja mais</span>
+                    </a>
+                </div>
+                <div class="shop-box">
+                    <div class="shop-img">
+                        <img src="assets/imagens/home/shop-bebidas.png" alt="Xícara de café">
+                    </div>
+                    <div class="stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <h2>Cafés, Chás e Bebidas Quentes</h2>
+                    <p>R$7</p>
+                    <a href="emconstrucao.html" class="btn3">
+                        <span>Veja mais</span>
+                    </a>
+                </div>
+                <div class="shop-box">
+                    <div class="shop-img">
+                        <img src="assets/imagens/home/shop-sobremesas.png" alt="Prato com fatia de bolo">
+                    </div>
+                    <div class="stars">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <h2>Doces e Sobremesas</h2>
+                    <p>R$7</p>
+                    <a href="emconstrucao.html" class="btn3">
+                        <span>Veja mais</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="review container" id="review">
+            <div class="heading">
+                <h1>Reviews Consumidores</h1>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide">
+                        <div class="review-box">
+                            <img src="https://64.media.tumblr.com/b4210bd1bdf7779d8d84b767e3adb621/1532233e2a3868e7-0d/s2048x3072/827a14cb18836d80cf9816616bfecdb010b28641.jpg"
+                                alt="Review consumidor 1">
+                            <h2>Aggie O'Conner</h2>
+                            <span>Eu diria que esse lugar tem um <br>
+                                toque... especial.</span>
+                            <p>Eu diria que esse lugar tem um toque... especial. Prepare-se para ser enfeitiçado por esta 
+                                cafeteria encantadora! Desde o momento em que você cruza a porta, é como se fosse transportado 
+                                para um mundo onde a magia é real e cada xícara de café é uma obra-prima mística. As 
+                                poções que eles chamam de bebidas aqui são simplesmente divinas, misturando sabores 
+                                com uma precisão alquímica que deixa qualquer um maravilhado. A atmosfera misteriosa e 
+                                acolhedora faz com que você queira voltar sempre para mais uma dose de magia líquida. 
+                                Este lugar é realmente uma joia oculta, um segredo que só os verdadeiramente especiais descobrem.</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="swiper-slide">
+                        <div class="review-box">
+                            <img src="https://it.series-80.net/wp-content/uploads/sites/4/2024/02/La-stagione-25-di-SVU-scava-in-profondita-nella-mente.jpg" alt="Review consumidor 2">
+                            <h2>Olivia Benson</h2>
+                            <span>Entrar nessa cafeteria é como <br>
+                                encontrar um local seguro. </span>
+                            <p>Entrar nessa cafeteria é como encontrar um local seguro, onde as coisas são simples, mas não se 
+                                engane, tudo está no lugar certo. O ambiente transmite confiança, e o atendimento é impecável. O 
+                                aroma do café é acolhedor, mas o sabor... isso é o que realmente faz a diferença. Assim como uma 
+                                investigação bem-feita, aqui você sente que cada detalhe foi pensado para proporcionar a melhor 
+                                experiência. É um refúgio onde cada cliente é tratado com respeito e cuidado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="swiper-slide">
+                        <div class="review-box">
+                            <img src="https://uploads.spiritfanfiction.com/historias/capitulos/202201/me-perdoa-23466486-090120221802.jpg" alt="Review consumidor 3">
+                            <h2>Lilian Luthor</h2>
+                            <span>Uma cafeteria com um <br>
+                                conceito sofisticado.</span>
+                            <p>Uma cafeteria com um conceito sofisticado, mas que, ao mesmo tempo, nunca perde o toque 
+                                humano. Aqui, o design é meticulosamente planejado, e o menu... ah, o menu, é uma obra-prima em si. 
+                                Cada bebida e cada sabor são criados com precisão, como se cada ingrediente tivesse um propósito 
+                                maior. Não é apenas sobre café, é sobre dominar a experiência de quem entra e deixar uma marca 
+                                inconfundível. Este é o tipo de lugar que exige atenção, mas, mais importante, é capaz de conquistar 
+                                quem ousa entrar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="book container" id="book">
+            <img src="assets/imagens/home/book-imagem-fundo.jpg" alt="Imagem de fundo de cafeteria" class="book-img">
+            <div class="book-overlay"></div>
+            <div class="book-data">
+                <h2>Reserve nossas mesas <br>
+                    para eventos</h2>
+                <form action="book" method="post">
+                    <div class="input-box">
+                        <ion-icon name="call"></ion-icon>
+                        <input type="tel" name="tel" placeholder="Insira seu numero" id="">
+                    </div>
+                    <div class="input-box">
+                        <ion-icon name="person"></ion-icon>
+                        <input type="number" name="" placeholder="Número de pessoas" id="">
+                    </div>
+                    <a href="#" class="book-btn">Reservar</a>
+                </form>
+            </div>
+        </section>
+
+        <section class="blog container" id="blog">
+            <div class="heading">
+                <h1>Principais publicações</h1>
+            </div>
+            <div class="blog-details">
+                <div class="blog-box">
+                    <div class="blog-image">
+                        <img src="assets/imagens/home/blog-postagem1.jpg" alt="Espaço de leitura acolhedor com estantes de livros">
+                    </div>
+                    <div class="blog-content">
+                        <a href="#" class="title">Descubra o Cantinho da Leitura</a>
+                        <span>by Admin / 5 de jan, 2025</span>
+                        <p>Conheça o espaço perfeito para relaxar com um bom livro enquanto aprecia um café especial.</p>
+                        <a href="emconstrucao.html" class="btn">Leia mais</a>
+                    </div>
+                </div>
+                <div class="blog-box">
+                    <div class="blog-image">
+                        <img src="assets/imagens/home/blog-postagem2.jpg" alt="Mesa com café e livro">
+                    </div>
+                    <div class="blog-content">
+                        <a href="#" class="title">Café & Literatura: Uma Combinação Perfeita</a>
+                        <span>by Admin / 5 de jan, 2025</span>
+                        <p>Descubra como o nosso clube do livro transforma simples encontros em momentos mágicos.</p>
+                        <a href="emconstrucao.html" class="btn">Leia mais</a>
+                    </div>
+                </div>
+                <div class="blog-box">
+                    <div class="blog-image">
+                        <img src="assets/imagens/home/blog-postagem3.jpg" alt="Xícara derrubada em uma mesa com grãos de café">
+                    </div>
+                    <div class="blog-content">
+                        <a href="#" class="title">Nossos Cafés Artesanais</a>
+                        <span>by Admin / 5 de jan, 2025</span>
+                        <p>Descubra os sabores exclusivos do nosso menu de cafés artesanais, criados para acompanhar perfeitamente a sua experiência de leitura.</p>
+                        <a href="emconstrucao.html" class="btn">Leia mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer" id="footer">
+            <div class="social">
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-linkedin"></ion-pinterest></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <ul class="list">
+                <li><a href="licenciamentoeatribuiçoes.html">Licenciamento e atribuições</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+            <p class="copyright">
+                © 2025 Camilly Barbosa - Cafeteria Botafé | Todos os Direitos Reservados
+            </p>
+        </footer>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

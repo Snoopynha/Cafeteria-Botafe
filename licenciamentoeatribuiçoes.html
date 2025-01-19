@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cafeteria Botafé - Licenciamento e atribuições</title>
+        <meta name="description" content="Cafeteria Botafé foi uma ideia feita em uma avaliação onde teria de fazer uma loja que utilizaria matriz para guardar seus produtos, códigos e preços para a matéria Fundamentos de Algoritmo em C.">
+        <meta name="author" content="Camilly Vitória Barbosa">
+        <link rel="stylesheet" type="text/css" href="css/styles2.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="icon" href="assets/icones/favicon.ico" type="image/x-icon">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/icones/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/icones/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icones/apple-touch-icon.png">
+        <link rel="manifest" href="assets/icones/site.webmanifest">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <input type="checkbox" id="menu-btn" class="menu-btn">
+                <label for="menu-btn" class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1em" width="1em">
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </label>
+
+                <div class="side-menu">
+                    <div class="menu-container">
+                        <strong>Principais Links</strong>
+
+                        <label for="menu-btn" class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" height="1em" width="1em">
+                                <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                            </svg>
+                        </label>
+
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="emconstrucao.html">Sobre</a></li>
+                            <li><a href="emconstrucao.html">Produtos</a></li>
+                            <li><a href="emconstrucao.html">Review</a></li>
+                            <li><a href="emconstrucao.html">Contato</a></li>
+                            <li><a href="emconstrucao.html">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="index.html" class="logo">
+                    <img src="assets/icones/logo-grande.png" alt="Logo">
+                </a>
+
+                <div class="nav-btns">
+                    <a href="#" class="nav-search" id="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </a>
+                    <form id="search-form" class="nav-search hidden">
+                        <input type="text" id="search-input" placeholder="Buscar...">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <a href="#" class="nav-user" id="nav-user">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="1em" width="1em">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="nav-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="1em" width="1em">
+                            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                        </svg>
+                        <span>+</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="form">
+            <div class="login-form" id="login-form">
+                <a href="#" class="form-cancel" id="login-cancel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"  height="1em"  width="1em"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </a>
+
+                <strong>Fazer login</strong>
+
+                <form action="" method="post">
+                    <input type="email" name="email" placeholder="Seuemail@gmail.com" id="email" required>
+                    <input type="password" name="password" placeholder="Senha" id="password" required>
+                    <input type="submit" value="Logar">
+                </form>
+
+                <div class="form-btns">
+                    <a href="#" class="password-forget">Esqueceu sua senha?</a>
+                    <a href="#" class="signup-btn" id="signup-btn">Criar uma conta</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="signup-form" id="signup-form">
+                <a href="#" class="form-cancel" id="signup-cancel">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"  height="1em"  width="1em"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </a>
+
+                <strong>Criar conta</strong>
+
+                <form action="" method="post">
+                    <input type="text" name="fullname" placeholder="Nome completo" id="fullname" required>
+                    <input type="email" name="email" placeholder="Seuemail@gmail.com" id="email" required>
+                    <input type="password" name="password" placeholder="Senha" id="password" required>
+                    <input type="submit" value="Criar">
+                </form>
+
+                <div class="form-btns">
+                    <a href="#" class="already-account" id="already-account">Já possui conta?</a>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <section class="videos container" id="videos">
+                <div class="heading">
+                    <h2>Vídeos de Inspiração</h2>
+                </div>
+                <div class="video-content">
+                    <div class="video-box">
+                        <strong>Create A Responsive Coffee Shop Website Design Using HTML CSS And JavaScript:</strong> Going-To Internet - 
+                        <a href="https://www.youtube.com/watch?v=JcpiCzIPY1I&pp=ygUPaHRtbCBjc3MgY29mZmVl">Link para o Vídeo</a>
+                    </div>
+                    <div class="video-box">
+                        <strong>☕ Create A Responsive Coffee Website in HTML CSS & JavaScript | Step-By-Step Tutorial:</strong> CodingNepal - 
+                        <a href="https://www.youtube.com/watch?v=MYFgtnKMDp4">Link para o Vídeo</a>
+                    </div>
+                    <div class="video-box">
+                        <strong>Create a Responsive Coffee Shop Website Using HTML CSS And JavaScript:</strong> CarpoolVenom - 
+                        <a href="https://www.youtube.com/watch?v=ENwdYIwkEpc&pp=ygUPaHRtbCBjc3MgY29mZmVl">Link para o Vídeo</a>
+                    </div>
+                    <div class="video-box">
+                        <strong>Responsive Starbucks Website Design Using HTML CSS And JavaScript:</strong> CarpoolVenom - 
+                        <a href="https://www.youtube.com/watch?v=riiFdR-qQPk">Link para o Vídeo</a>
+                    </div>
+                    <div class="video-box">
+                        <strong>How To Make Responsive Coffee Shop Website Design Using HTML - CSS - JavaScript Step By Step:</strong> Sr. Web Designer - 
+                        <a href="https://www.youtube.com/watch?v=HjnEWZijBn8">Link para o Vídeo</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="images container" id="images">
+            <div class="heading">
+                <h2>Imagens Utilizadas</h2>
+            </div>
+            <div class="image-details">
+                <div class="image content">
+                    <h3>Página Inicial</h3>
+                    <div class="image-box">
+                        <strong>Delicious coffee cup isolated:</strong> Freepik - 
+                        <a href="https://www.freepik.com/free-psd/delicious-coffee-cup-isolated_316404062.htm#fromView=search&page=2&position=17&uuid=ca40c1cc-8c63-4fed-b5c2-8e6cb466af38">Imagem de freepik</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Book free icon:</strong> Mavadee - 
+                        <a href="https://www.flaticon.com/free-icon/book_1164651?term=book&page=1&position=33&origin=tag&related_id=1164651" title="book icons">Book icons criado por mavadee - Flaticon</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Cup Of Hot Chocolate free icon:</strong> Freepik - 
+                        <a href="https://www.flaticon.com/free-icon/cup-of-hot-chocolate_15234?term=tea&page=2&position=15&origin=search&related_id=15234" title="tea icons">Tea icons criado por Freepik - Flaticon</a> 
+                    </div>
+                    <div class="image-box">
+                        <strong>Open Book free icon:</strong> Roundicons Premium - 
+                        <a href="https://www.flaticon.com/free-icon/open-book_613307?term=book&related_id=613307" title="book icons">Book icons criado por Roundicons Premium - Flaticon</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Crispy spring rolls served with ketchup and lettuce on a plate on a transparent background:</strong> Muhammad Abdullah - 
+                        <a href="https://www.freepik.com/free-psd/crispy-spring-rolls-served-with-ketchup-lettuce-plate-transparent-background_404514872.htm#fromView=image_search_similar&page=1&position=1&uuid=297ad442-3c30-4ef7-ae3e-bc92459af78b">Imagem de muhammad.abdullah on Freepik</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Deliciosos mini bolos caseiros de chocolate, vista superior:</strong> Azerbaijan stockers - 
+                        <a href="https://br.freepik.com/fotos-gratis/deliciosos-mini-bolos-caseiros-de-chocolate-vista-superior_8136235.htm#from_view=detail_alsolike">Imagem de azerbaijan_stockers no Freepik</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Female barista with mask working in the coffeehouse:</strong> Freepik - 
+                        <a href="https://www.freepik.com/free-photo/female-barista-with-mask-working-coffeehouse_12106799.htm#fromView=image_search&page=1&position=0&uuid=bbdb9251-9bdd-468e-94c6-e8db31b3441c">Imagem de freepik</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Livros, Biblioteca, Estante. De utilização gratuita:</strong> StockSnap - 
+                        <a href="https://pixabay.com/pt/photos/livros-biblioteca-estante-2599241/">Pixabay</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Folhas, Café, Copo. De utilização gratuita:</strong> Jose Antonio Alba - 
+                        <a href="https://pixabay.com/pt/photos/folhas-caf%C3%A9-copo-ainda-vida-livro-1076307/">Pixabay</a>
+                    </div>
+                    <div class="image-box">
+                        <strong>Café, Xícara de café, Porcelana. De utilização gratuita:</strong> Couleur - 
+                        <a href="https://pixabay.com/pt/photos/caf%C3%A9-x%C3%ADcara-de-caf%C3%A9-porcelana-1576552/">Pixabay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="footer">
+            <div class="social">
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-linkedin"></ion-pinterest></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <ul class="list">
+                <li><a href="#">Licenciamento e atribuições</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+            <p class="copyright">
+                © 2025 Camilly Barbosa - Cafeteria Botafé | Todos os Direitos Reservados
+            </p>
+        </footer>
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

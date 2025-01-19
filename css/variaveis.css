@@ -1,0 +1,28 @@
+:root {
+    --branco: #fff;
+    --cinza: #f5f5f5;
+    --preto: #222;
+    --preto2: #999; 
+    --marrom-principal: #41271f;
+    --marrom-claro: #633a32;
+    --marrom-claro2: #9c6458;
+    --amarelo-secundario: #f3961c;
+    --amarelo-claro: #f8ab47;
+    --amarelo-claro2: #f7c467;
+
+    --fonte-tamanho-pp: 0.9rem;
+    --fonte-tamanho-p: 1rem;
+    --fonte-tamanho-m: 1.12rem;
+    --fonte-tamanho-g: 1.5rem;
+    --fonte-tamanho-gg: 2rem;
+    --fonte-tamanho-xg: 2.3rem;
+
+    --fonte-espessura-light: 300;
+    --fonte-espessura-normal: 400;
+    --fonte-espessura-medium: 500;
+    --fonte-espessura-semibold: 600;
+    --fonte-espessura-bold: 700;
+    --fonte-espessura-extrabold: 800;
+
+    --borda: 7px solid #fff8f7;
+}
