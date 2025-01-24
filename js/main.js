@@ -101,3 +101,25 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(box);
     });
 });
+
+const swiper2 = new Swiper('.swiper2', {
+    loop: true, // Permite que o carrossel seja infinito
+    navigation: {
+        nextEl: '.swiper2-button-next',
+        prevEl: '.swiper2-button-prev',
+    },
+    pagination: {
+        el: '.swiper2-pagination',
+        clickable: true,
+    },
+    slidesPerView: 1, // Mostra um slide por vez
+    spaceBetween: 30, // Espaçamento entre os slides
+    breakpoints: {
+        768: {
+            slidesPerView: 2, // Mostra 2 slides lado a lado em telas maiores
+        },
+        1024: {
+            slidesPerView: 3, // Mostra 3 slides lado a lado em telas ainda maiores
+        },
+    },
+});
