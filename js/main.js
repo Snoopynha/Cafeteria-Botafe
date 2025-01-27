@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const swiper2 = new Swiper('.swiper2', {
-    loop: true, // Permite que o carrossel seja infinito
+    loop: true,
     navigation: {
         nextEl: '.swiper2-button-next',
         prevEl: '.swiper2-button-prev',
@@ -112,14 +112,14 @@ const swiper2 = new Swiper('.swiper2', {
         el: '.swiper2-pagination',
         clickable: true,
     },
-    slidesPerView: 1, // Mostra um slide por vez
-    spaceBetween: 30, // Espaçamento entre os slides
+    slidesPerView: 1,
+    spaceBetween: 30,
     breakpoints: {
         768: {
-            slidesPerView: 2, // Mostra 2 slides lado a lado em telas maiores
+            slidesPerView: 2,
         },
         1024: {
-            slidesPerView: 3, // Mostra 3 slides lado a lado em telas ainda maiores
+            slidesPerView: 3,
         },
     },
 });

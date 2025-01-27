@@ -10,6 +10,11 @@
     font-family: 'Playfair Display';
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -361,7 +366,12 @@ main {
 }
 
 .aboutus {
-    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .aboutus .heading h1 {
@@ -370,9 +380,18 @@ main {
     text-align: center;
 }
 
+.aboutus-content {
+    width: 90%;
+    max-width: 1200px;
+    text-align: justify;
+}
+
 .aboutus-content p {
     font-size: var(--fonte-tamanho-m);
     font-weight: var(--fonte-espessura-extrabold);
+    line-height: 1.6;
+    margin: 1rem 0;
+    word-wrap: break-word;
 }
 
 .aboutus .heading h1,
@@ -629,15 +648,6 @@ main {
     max-width: 600px;
 }
 
-.swiper2-button-prev,
-.swiper2-button-next {
-    color: var(--amarelo-secundario);
-}
-
-.swiper2-pagination-bullet {
-    background-color: var(--amarelo-secundario);
-}
-
 .book {
     position: relative;
     display: flex;
@@ -794,6 +804,26 @@ main {
 }
 
 @media (max-width: 768px) {
+    .aboutus {
+        padding: 3rem 1rem;
+    }
+
+    .aboutus .heading h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        text-align: center;
+    }
+
+    .aboutus-content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .aboutus-content p {
+        font-size: var(--fonte-tamanho-p);
+        line-height: 1.5;
+        margin: 1rem 0;
+    }
+
     .visitus-content {
         grid-template-columns: 1fr;
     }
@@ -805,21 +835,31 @@ main {
 
     .whyus-content {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .ourmission-content h2 {
-        font-size: 2.5rem;
+        font-size: var(--fonte-tamanho-g);
+        line-height: 1.4;
+        text-align: center;
     }
 
     .services-details h2 {
-        font-size: 1.8rem;
+        font-size: var(--fonte-tamanho-m);
+        text-align: center;
     }
 
     .services-text h3 {
-        font-size: 1.2rem;
+        font-size: var(--fonte-tamanho-p);
     }
 
     .services-text p {
-        font-size: 0.9rem;
+        font-size: var(--fonte-tamanho-pp);
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .footer ul {
+        padding: 10px 0;
     }
 }
